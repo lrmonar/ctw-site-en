@@ -1,20 +1,12 @@
-# netlify.toml
-
 [build]
   command = "npm run build"
   publish = "build"
 
-[redirects]
-  # Support client-side routing (React Router)
-  [[redirects]]
-    from = "/*"
-    to = "/index.html"
-    status = 200
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 [context.production.environment]
   REACT_APP_API_URL = "https://api.example.com"
   NODE_ENV = "production"
-
-[context.deploy-preview.environment]
-  REACT_APP_API_URL = "https://staging-api.example.com"
-  NODE_ENV = "development"
