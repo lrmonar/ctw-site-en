@@ -5,49 +5,90 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
+/**
+ * Fully Netlify-compatible backend-free contact form.
+ * - Includes honeypot anti-spam field
+ * - Works with JS disabled
+ * - Sends email to Cloudflare-routed address (Netlify handles mail delivery)
+ */
 const ContactForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Handles submission to Netlify
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      console.log('Form submitted:', formData);
-      
-      // Show success toast
+
+    // Netlify needs formData encoded as application/x-www-form-urlencoded
+    const encoded = new URLSearchParams({
+      "form-name": "contact",
+      ...formData
+    }).toString();
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encoded,
+      });
+
+      if (!response.ok) throw new Error("Network response was not ok");
+
       toast({
         title: "Message sent!",
-        description: "We'll get back to you as soon as possible.",
+        description: "We’ll get back to you as soon as possible.",
       });
-      
+
       // Reset form
       setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
+        name: "",
+        email: "",
+        subject: "",
+        message: ""
       });
-      
-      setIsSubmitting(false);
-    }, 1500);
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was a problem sending your message.",
+        variant: "destructive",
+      });
+    }
+
+    setIsSubmitting(false);
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      onSubmit={handleSubmit}
+      className="space-y-6"
+    >
+
+      {/* Required hidden fields for Netlify */}
+      <input type="hidden" name="form-name" value="contact" />
+      <div className="hidden">
+        <label>
+          Don’t fill this out: <input name="bot-field" />
+        </label>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
           <label htmlFor="name" className="text-sm font-medium">
@@ -62,7 +103,7 @@ const ContactForm = () => {
             required
           />
         </div>
-        
+
         <div className="space-y-2">
           <label htmlFor="email" className="text-sm font-medium">
             Email Address
@@ -78,7 +119,7 @@ const ContactForm = () => {
           />
         </div>
       </div>
-      
+
       <div className="space-y-2">
         <label htmlFor="subject" className="text-sm font-medium">
           Subject
@@ -92,7 +133,7 @@ const ContactForm = () => {
           required
         />
       </div>
-      
+
       <div className="space-y-2">
         <label htmlFor="message" className="text-sm font-medium">
           Message
@@ -107,9 +148,9 @@ const ContactForm = () => {
           required
         />
       </div>
-      
+
       <Button type="submit" className="w-full md:w-auto" disabled={isSubmitting}>
-        {isSubmitting ? 'Sending...' : 'Send Message'}
+        {isSubmitting ? "Sending..." : "Send Message"}
       </Button>
     </form>
   );

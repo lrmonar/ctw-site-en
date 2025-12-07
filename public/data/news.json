@@ -1,0 +1,52 @@
+{
+  "cellular": [
+    {
+      "title": "5G Small Cells Expanding Across Latin America",
+      "date": "2025-01-18",
+      "source": "Telecom LATAM",
+      "summary": "New deployments by regional carriers show rapid growth of 5G small cells in commercial and industrial zones.",
+      "url": "https://example.com/cellular-5g-small-cells"
+    },
+    {
+      "title": "Private 5G Networks for SMEs Now Affordable",
+      "date": "2025-02-02",
+      "source": "TechBiz News",
+      "summary": "Pricing reductions in CBRS and shared-spectrum licensing are making private 5G networks increasingly accessible.",
+      "url": "https://example.com/private-5g-sme"
+    }
+  ],
+
+  "telephony": [
+    {
+      "title": "VoIP Adoption Surges for Remote Teams",
+      "date": "2024-12-14",
+      "source": "CloudTelephony Today",
+      "summary": "SMEs continue replacing legacy PBX systems with cloud-hosted VoIP solutions for cost savings and reliability.",
+      "url": "https://example.com/voip-remote-teams"
+    },
+    {
+      "title": "AI-Based Call Routing Improves Support Quality",
+      "date": "2025-01-05",
+      "source": "Unified Comms Weekly",
+      "summary": "Advanced AI routing is helping call centers reduce queue times and improve customer satisfaction.",
+      "url": "https://example.com/ai-call-routing"
+    }
+  ],
+
+  "web": [
+    {
+      "title": "PWAs Gain Momentum in Enterprise Environments",
+      "date": "2025-02-11",
+      "source": "WebTech Review",
+      "summary": "Progressive Web Apps are being adopted for internal dashboards and customer portals due to low maintenance costs.",
+      "url": "https://example.com/pwa-enterprise"
+    },
+    {
+      "title": "High-Performance Edge Hosting for SMEs",
+      "date": "2025-01-28",
+      "source": "Modern Web Insights",
+      "summary": "Affordable edge hosting options are now available, improving load times across continents.",
+      "url": "https://example.com/edge-hosting-smes"
+    }
+  ]
+}
