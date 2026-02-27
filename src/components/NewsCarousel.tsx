@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Mock news data - in a real app this would come from an API
-const mockNewsItems = [
+const news = [
   {
     id: 1,
     title: "5G Technology Reshaping Business Communications",
@@ -30,16 +30,27 @@ const mockNewsItems = [
   }
 ];
 
+if (!news || news.length === 0) {
+  return null;
+}
+
+interface NewsItem {
+  title: string;
+  link: string;
+  pubDate?: string;
+  source?: string;
+}
+
 const NewsCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev === mockNewsItems.length - 1 ? 0 : prev + 1));
+    setCurrentSlide((prev) => (prev === news.length - 1 ? 0 : prev + 1));
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev === 0 ? mockNewsItems.length - 1 : prev - 1));
+    setCurrentSlide((prev) => (prev === 0 ? news.length - 1 : prev - 1));
   };
 
   const goToSlide = (index: number) => {
@@ -80,18 +91,31 @@ const NewsCarousel = () => {
     >
       {/* Carousel slides */}
       <div className="h-full">
-        {mockNewsItems.map((item, index) => (
+        {news.map((item: NewsItem, index: number) => (
           <div 
             key={item.id}
             className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out ${
               index === currentSlide ? 'opacity-100' : 'opacity-0 pointer-events-none'
             }`}
           >
-            <img 
-              src={`${item.image}?auto=format&fit=crop&w=1600&q=80`} 
-              alt={item.title}
-              className="w-full h-full object-cover"
-            />
+			<div className="w-full h-full bg-gradient-to-r from-blue-800 to-gray-900 flex items-center justify-center p-8">
+			  <div className="text-white text-center max-w-3xl">
+				<h2 className="text-xl md:text-2xl font-bold mb-4">
+				  {item.title}
+				</h2>
+				<p className="text-sm opacity-80 mb-4">
+				  {item.source}
+				</p>
+				<a
+				  href={item.link}
+				  target="_blank"
+				  rel="noopener noreferrer"
+				  className="inline-block bg-white text-black px-4 py-2 rounded"
+				>
+				  Read Article
+				</a>
+			  </div>
+			</div>
             <div className="carousel-caption">
               <h2 className="text-xl md:text-2xl font-bold mb-2">{item.title}</h2>
               <p className="hidden md:block">{item.description}</p>
@@ -125,7 +149,7 @@ const NewsCarousel = () => {
 
       {/* Indicators */}
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-        {mockNewsItems.map((_, index) => (
+        {news.map((_, index) => (
           <button
             key={index}
             onClick={() => {

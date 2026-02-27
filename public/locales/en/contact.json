@@ -1,0 +1,23 @@
+{
+  "hero_title": "Contact Us",
+  "hero_subtitle": "Have questions or ready to start a project? Get in touch with our consulting team.",
+
+  "form_title": "Send us a message",
+
+  "info_title": "Contact Information",
+  "email_label": "Email",
+  "phone_label": "Phone",
+  "address_label": "Office Location",
+  "hours_label": "Business Hours",
+
+  "hours_weekdays": "Monday - Friday",
+  "hours_saturday": "Saturday",
+  "hours_sunday": "Sunday: Closed",
+
+  "map_title": "Find Us",
+  "map_placeholder": "Interactive Map Would Be Here",
+
+  "faq_title": "Still Have Questions?",
+  "faq_subtitle": "Check out our frequently asked questions or schedule a call with one of our consultants.",
+  "faq_button": "Schedule a Call"
+}

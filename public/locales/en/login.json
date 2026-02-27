@@ -1,0 +1,9 @@
+{
+  "title": "Login",
+  "description": "Access your account securely using your credentials.",
+  "form": {
+    "email": "Email",
+    "password": "Password",
+    "submit": "Sign In"
+  }
+}

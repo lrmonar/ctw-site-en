@@ -1,0 +1,9 @@
+{
+  "title": "Iniciar Sesión",
+  "description": "Acceda a su cuenta de manera segura usando sus credenciales.",
+  "form": {
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "submit": "Ingresar"
+  }
+}

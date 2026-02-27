@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Soluciones de consultoría integrales para ayudar a su empresa a prosperar en la era digital."
+  },
+
+  "items": {
+    "cellular": {
+      "title": "Consultoría Celular",
+      "description": "Asesoría experta en tecnología e implementación de redes celulares.",
+      "features": [
+        "Planificación y despliegue de redes 5G",
+        "Soluciones de conectividad celular para IoT",
+        "Implementación de redes celulares privadas",
+        "Optimización del rendimiento de red"
+      ]
+    },
+    "telephony": {
+      "title": "Soluciones de Telefonía",
+      "description": "Sistemas de telefonía modernos diseñados para la eficiencia empresarial.",
+      "features": [
+        "Implementación y migración a VoIP",
+        "Configuración y optimización de call centers",
+        "Integración de comunicaciones unificadas",
+        "Soluciones de PBX en la nube"
+      ]
+    },
+    "webapps": {
+      "title": "Aplicaciones Web",
+      "description": "Aplicaciones web personalizadas según las necesidades de su negocio.",
+      "features": [
+        "Desarrollo de Aplicaciones Web Progresivas (PWA)",
+        "Soluciones web basadas en la nube",
+        "Diseño de aplicaciones web empresariales",
+        "Modernización de sistemas heredados"
+      ]
+    },
+    "network": {
+      "title": "Infraestructura de Red",
+      "description": "Diseño e implementación de sistemas de red robustos.",
+      "features": [
+        "Planificación de arquitectura de red",
+        "Selección e implementación de hardware",
+        "Auditorías de seguridad de red",
+        "Soluciones de escalabilidad"
+      ]
+    },
+    "cloud": {
+      "title": "Migración a la Nube",
+      "description": "Transición fluida de sistemas y aplicaciones a la nube.",
+      "features": [
+        "Evaluación de preparación para la nube",
+        "Estrategia y planificación de migración",
+        "Entornos multi-nube",
+        "Optimización de costos"
+      ]
+    },
+    "security": {
+      "title": "Consultoría de Seguridad",
+      "description": "Proteja su negocio con soluciones de seguridad integrales.",
+      "features": [
+        "Revisión de arquitectura de seguridad",
+        "Evaluación de vulnerabilidades",
+        "Consultoría de cumplimiento",
+        "Capacitación en concientización de seguridad"
+      ]
+    },
+    "training": {
+      "title": "Capacitación Tecnológica",
+      "description": "Equipe a su equipo con las habilidades necesarias para triunfar.",
+      "features": [
+        "Programas de capacitación personalizados",
+        "Talleres tecnológicos",
+        "Preparación para certificaciones",
+        "Transferencia de conocimiento"
+      ]
+    },
+    "process": {
+      "title": "Optimización de Procesos",
+      "description": "Mejore la eficiencia de sus procesos empresariales.",
+      "features": [
+        "Análisis de procesos empresariales",
+        "Automatización de flujos de trabajo",
+        "Transformación digital",
+        "Mejoras de productividad"
+      ]
+    },
+    "customdev": {
+      "title": "Desarrollo Personalizado",
+      "description": "Soluciones de software a medida para sus necesidades específicas.",
+      "features": [
+        "Ingeniería de requisitos",
+        "Metodología ágil de desarrollo",
+        "Garantía de calidad y pruebas",
+        "Soporte y mantenimiento continuo"
+      ]
+    }
+  },
+
+  "cta": {
+    "title": "¿Necesita una Solución Personalizada?",
+    "subtitle": "Podemos crear un paquete a medida que responda a los desafíos específicos de su empresa.",
+    "button": "Contactar al Equipo"
+  }
+}

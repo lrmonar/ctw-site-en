@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { useTranslation } from "react-i18next";
 import ServiceCard from '@/components/ServiceCard';
 import { 
   Phone, 
@@ -14,104 +14,107 @@ import {
 } from 'lucide-react';
 
 const Services = () => {
+// 	orig. value:  const { t } = useTranslation('services');
+  const { t } = useTranslation('services');
+
   const servicesData = [
     {
-      title: "Cellular Consulting",
-      description: "Expert guidance on cellular network technology and implementation.",
+      title: t("items.cellular.title"),
+      description: t("items.cellular.description"),
       icon: <Smartphone className="w-6 h-6" />,
       features: [
-        "5G network planning and deployment",
-        "IoT cellular connectivity solutions",
-        "Private cellular network setup",
-        "Network performance optimization"
+        t("items.cellular.features.0"),
+        t("items.cellular.features.1"),
+        t("items.cellular.features.2"),
+        t("items.cellular.features.3"),
       ]
     },
     {
-      title: "Telephony Solutions",
-      description: "Modern telephony systems designed for business efficiency.",
+      title: t("items.telephony.title"),
+      description: t("items.telephony.description"),
       icon: <Phone className="w-6 h-6" />,
       features: [
-        "VoIP implementation and migration",
-        "Call center setup and optimization",
-        "Unified communications integration",
-        "Cloud PBX solutions"
+        t("items.telephony.features.0"),
+        t("items.telephony.features.1"),
+        t("items.telephony.features.2"),
+        t("items.telephony.features.3"),
       ]
     },
     {
-      title: "Web Applications",
-      description: "Custom web applications tailored to your business needs.",
+      title: t("items.webapps.title"),
+      description: t("items.webapps.description"),
       icon: <Globe className="w-6 h-6" />,
       features: [
-        "Progressive Web App development",
-        "Cloud-based web solutions",
-        "Enterprise web application design",
-        "Legacy system modernization"
+        t("items.webapps.features.0"),
+        t("items.webapps.features.1"),
+        t("items.webapps.features.2"),
+        t("items.webapps.features.3"),
       ]
     },
     {
-      title: "Network Infrastructure",
-      description: "Design and implementation of robust network systems.",
+      title: t("items.network.title"),
+      description: t("items.network.description"),
       icon: <Signal className="w-6 h-6" />,
       features: [
-        "Network architecture planning",
-        "Hardware selection and deployment",
-        "Network security audits",
-        "Scalability solutions"
+        t("items.network.features.0"),
+        t("items.network.features.1"),
+        t("items.network.features.2"),
+        t("items.network.features.3"),
       ]
     },
     {
-      title: "Cloud Migration",
-      description: "Seamless transition of systems and applications to the cloud.",
+      title: t("items.cloud.title"),
+      description: t("items.cloud.description"),
       icon: <Server className="w-6 h-6" />,
       features: [
-        "Cloud readiness assessment",
-        "Migration strategy and planning",
-        "Multi-cloud environments",
-        "Cost optimization"
+        t("items.cloud.features.0"),
+        t("items.cloud.features.1"),
+        t("items.cloud.features.2"),
+        t("items.cloud.features.3"),
       ]
     },
     {
-      title: "Security Consulting",
-      description: "Protect your business with comprehensive security solutions.",
+      title: t("items.security.title"),
+      description: t("items.security.description"),
       icon: <Shield className="w-6 h-6" />,
       features: [
-        "Security architecture review",
-        "Vulnerability assessment",
-        "Compliance consulting",
-        "Security awareness training"
+        t("items.security.features.0"),
+        t("items.security.features.1"),
+        t("items.security.features.2"),
+        t("items.security.features.3"),
       ]
     },
     {
-      title: "Technology Training",
-      description: "Equip your team with the skills they need to succeed.",
+      title: t("items.training.title"),
+      description: t("items.training.description"),
       icon: <BookOpen className="w-6 h-6" />,
       features: [
-        "Custom training programs",
-        "Technology workshops",
-        "Certification preparation",
-        "Knowledge transfer"
+        t("items.training.features.0"),
+        t("items.training.features.1"),
+        t("items.training.features.2"),
+        t("items.training.features.3"),
       ]
     },
     {
-      title: "Process Optimization",
-      description: "Streamline your business processes for maximum efficiency.",
+      title: t("items.process.title"),
+      description: t("items.process.description"),
       icon: <Workflow className="w-6 h-6" />,
       features: [
-        "Business process analysis",
-        "Workflow automation",
-        "Digital transformation",
-        "Productivity enhancements"
+        t("items.process.features.0"),
+        t("items.process.features.1"),
+        t("items.process.features.2"),
+        t("items.process.features.3"),
       ]
     },
     {
-      title: "Custom Development",
-      description: "Bespoke software solutions designed for your specific needs.",
+      title: t("items.customdev.title"),
+      description: t("items.customdev.description"),
       icon: <Code className="w-6 h-6" />,
       features: [
-        "Requirements engineering",
-        "Agile development methodology",
-        "Quality assurance & testing",
-        "Ongoing support & maintenance"
+        t("items.customdev.features.0"),
+        t("items.customdev.features.1"),
+        t("items.customdev.features.2"),
+        t("items.customdev.features.3"),
       ]
     }
   ];
@@ -121,9 +124,11 @@ const Services = () => {
       {/* Hero Section */}
       <section className="bg-consulting-light py-16 md:py-24">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-5xl font-bold mb-6 text-consulting-dark">Our Services</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-6 text-consulting-dark">
+            {t("hero.title")}
+          </h1>
           <p className="text-lg md:text-xl max-w-2xl mx-auto text-gray-600">
-            Comprehensive consulting solutions to help your business thrive in the digital age.
+            {t("hero.subtitle")}
           </p>
         </div>
       </section>
@@ -149,14 +154,14 @@ const Services = () => {
       <section className="py-16 bg-consulting-blue text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-4xl font-bold mb-6">
-            Need a Customized Solution?
+            {t("cta.title")}
           </h2>
           <p className="text-lg mb-8 max-w-2xl mx-auto">
-            We can create a tailored package that addresses your specific business challenges.
+            {t("cta.subtitle")}
           </p>
           <a href="/contact">
             <button className="bg-white text-consulting-blue hover:bg-gray-100 px-8 py-3 rounded-md font-semibold transition-colors">
-              Contact Our Team
+              {t("cta.button")}
             </button>
           </a>
         </div>

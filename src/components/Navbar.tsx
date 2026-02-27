@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import LanguageSwitcher from "./LanguageSwitcher";
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from 'lucide-react';
@@ -33,6 +34,8 @@ const Navbar = () => {
             <Link to="/contact" className="font-medium hover:text-consulting-blue transition-colors">
               Contact
             </Link>
+			{/* Language Switcher */}
+			<LanguageSwitcher />
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">

@@ -1,0 +1,10 @@
+{
+  "title": "Create an Account",
+  "description": "Register to access premium features and personalized services.",
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Create Account"
+  }
+}

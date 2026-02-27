@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive consulting solutions to help your business thrive in the digital age."
+  },
+
+  "items": {
+    "cellular": {
+      "title": "Cellular Consulting",
+      "description": "Expert guidance on cellular network technology and implementation.",
+      "features": [
+        "5G network planning and deployment",
+        "IoT cellular connectivity solutions",
+        "Private cellular network setup",
+        "Network performance optimization"
+      ]
+    },
+    "telephony": {
+      "title": "Telephony Solutions",
+      "description": "Modern telephony systems designed for business efficiency.",
+      "features": [
+        "VoIP implementation and migration",
+        "Call center setup and optimization",
+        "Unified communications integration",
+        "Cloud PBX solutions"
+      ]
+    },
+    "webapps": {
+      "title": "Web Applications",
+      "description": "Custom web applications tailored to your business needs.",
+      "features": [
+        "Progressive Web App development",
+        "Cloud-based web solutions",
+        "Enterprise web application design",
+        "Legacy system modernization"
+      ]
+    },
+    "network": {
+      "title": "Network Infrastructure",
+      "description": "Design and implementation of robust network systems.",
+      "features": [
+        "Network architecture planning",
+        "Hardware selection and deployment",
+        "Network security audits",
+        "Scalability solutions"
+      ]
+    },
+    "cloud": {
+      "title": "Cloud Migration",
+      "description": "Seamless transition of systems and applications to the cloud.",
+      "features": [
+        "Cloud readiness assessment",
+        "Migration strategy and planning",
+        "Multi-cloud environments",
+        "Cost optimization"
+      ]
+    },
+    "security": {
+      "title": "Security Consulting",
+      "description": "Protect your business with comprehensive security solutions.",
+      "features": [
+        "Security architecture review",
+        "Vulnerability assessment",
+        "Compliance consulting",
+        "Security awareness training"
+      ]
+    },
+    "training": {
+      "title": "Technology Training",
+      "description": "Equip your team with the skills they need to succeed.",
+      "features": [
+        "Custom training programs",
+        "Technology workshops",
+        "Certification preparation",
+        "Knowledge transfer"
+      ]
+    },
+    "process": {
+      "title": "Process Optimization",
+      "description": "Streamline your business processes for maximum efficiency.",
+      "features": [
+        "Business process analysis",
+        "Workflow automation",
+        "Digital transformation",
+        "Productivity enhancements"
+      ]
+    },
+    "customdev": {
+      "title": "Custom Development",
+      "description": "Bespoke software solutions designed for your specific needs.",
+      "features": [
+        "Requirements engineering",
+        "Agile development methodology",
+        "Quality assurance & testing",
+        "Ongoing support & maintenance"
+      ]
+    }
+  },
+
+  "cta": {
+    "title": "Need a Customized Solution?",
+    "subtitle": "We can create a tailored package that addresses your specific business challenges.",
+    "button": "Contact Our Team"
+  }
+}

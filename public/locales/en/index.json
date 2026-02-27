@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "title": "Digital Consulting Solutions",
+    "subtitle": "Expert consulting in Cellular, Telephony, and Web Applications to transform your business."
+  },
+
+  "news": {
+    "title": "Latest Industry News",
+    "subtitle": "Stay updated with the latest developments in technology and consulting.",
+    "categories": {
+      "cellular": "Cellular News",
+      "telephony": "Telephony News",
+      "web": "Web Technology News"
+    }
+  },
+
+  "services": {
+    "sectionTitle": "Our Services",
+    "sectionSubtitle": "Comprehensive consulting solutions tailored to your business needs.",
+    "viewAll": "View All Services",
+
+    "cellular": {
+      "title": "Cellular Consulting",
+      "description": "Expert guidance on cellular network technology and implementation.",
+      "features": {
+        "0": "5G network planning and deployment",
+        "1": "IoT cellular connectivity solutions",
+        "2": "Private cellular network setup",
+        "3": "Network performance optimization"
+      }
+    },
+
+    "telephony": {
+      "title": "Telephony Solutions",
+      "description": "Modern telephony systems designed for business efficiency.",
+      "features": {
+        "0": "VoIP implementation and migration",
+        "1": "Call center setup and optimization",
+        "2": "Unified communications integration",
+        "3": "Cloud PBX solutions"
+      }
+    },
+
+    "web": {
+      "title": "Web Applications",
+      "description": "Custom web applications tailored to your business needs.",
+      "features": {
+        "0": "Progressive Web App development",
+        "1": "Cloud-based web solutions",
+        "2": "Enterprise web application design",
+        "3": "Legacy system modernization"
+      }
+    }
+  },
+
+  "cta": {
+    "title": "Ready to Transform Your Business?",
+    "subtitle": "Our consultants are ready to help you navigate the complex world of modern technology.",
+    "contact": "Contact Us",
+    "explore": "Explore Services"
+  }
+}

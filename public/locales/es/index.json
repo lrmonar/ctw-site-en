@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "title": "Soluciones de Consultoría Digital",
+    "subtitle": "Consultoría experta en Aplicaciones Celulares, Telefonía y Web para transformar su negocio."
+  },
+
+  "news": {
+    "title": "Últimas Noticias de la Industria",
+    "subtitle": "Manténgase al día con los últimos desarrollos en tecnología y consultoría.",
+    "categories": {
+      "cellular": "Noticias de Tecnología Celular",
+      "telephony": "Noticias de Telefonía",
+      "web": "Noticias de Tecnología Web"
+    }
+  },
+
+  "services": {
+    "sectionTitle": "Nuestros Servicios",
+    "sectionSubtitle": "Soluciones integrales de consultoría adaptadas a las necesidades de su negocio.",
+    "viewAll": "Ver Todos los Servicios",
+
+    "cellular": {
+      "title": "Consultoría Celular",
+      "description": "Asesoría experta en tecnología e implementación de redes celulares.",
+      "features": {
+        "0": "Planificación e implementación de redes 5G",
+        "1": "Soluciones de conectividad celular para IoT",
+        "2": "Configuración de redes celulares privadas",
+        "3": "Optimización del rendimiento de la red"
+      }
+    },
+
+    "telephony": {
+      "title": "Soluciones de Telefonía",
+      "description": "Sistemas de telefonía moderna diseñados para la eficiencia empresarial.",
+      "features": {
+        "0": "Implementación y migración a VoIP",
+        "1": "Configuración y optimización de centros de llamadas",
+        "2": "Integración de comunicaciones unificadas",
+        "3": "Soluciones de PBX en la nube"
+      }
+    },
+
+    "web": {
+      "title": "Aplicaciones Web",
+      "description": "Aplicaciones web personalizadas adaptadas a las necesidades de su negocio.",
+      "features": {
+        "0": "Desarrollo de Aplicaciones Web Progresivas (PWA)",
+        "1": "Soluciones web basadas en la nube",
+        "2": "Diseño de aplicaciones web empresariales",
+        "3": "Modernización de sistemas heredados"
+      }
+    }
+  },
+
+  "cta": {
+    "title": "¿Listo para Transformar su Negocio?",
+    "subtitle": "Nuestros consultores están listos para ayudarle a navegar el mundo complejo de la tecnología moderna.",
+    "contact": "Contáctenos",
+    "explore": "Explorar Servicios"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "hero_title": "Contáctanos",
+  "hero_subtitle": "¿Tienes preguntas o deseas iniciar un proyecto? Ponte en contacto con nuestro equipo de consultoría.",
+
+  "form_title": "Envíanos un mensaje",
+
+  "info_title": "Información de Contacto",
+  "email_label": "Correo electrónico",
+  "phone_label": "Teléfono",
+  "address_label": "Ubicación de la Oficina",
+  "hours_label": "Horario de Atención",
+
+  "hours_weekdays": "Lunes - Viernes",
+  "hours_saturday": "Sábado",
+  "hours_sunday": "Domingo: Cerrado",
+
+  "map_title": "Encuéntranos",
+  "map_placeholder": "Aquí iría el mapa interactivo",
+
+  "faq_title": "¿Aún Tienes Preguntas?",
+  "faq_subtitle": "Consulta nuestras preguntas frecuentes o programa una llamada con uno de nuestros consultores.",
+  "faq_button": "Programar una Llamada"
+}

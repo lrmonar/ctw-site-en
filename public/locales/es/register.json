@@ -1,0 +1,10 @@
+{
+  "title": "Crear una Cuenta",
+  "description": "Regístrese para acceder a funciones premium y servicios personalizados.",
+  "form": {
+    "name": "Nombre",
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "submit": "Crear Cuenta"
+  }
+}
