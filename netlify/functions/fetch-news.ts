@@ -57,7 +57,7 @@ export async function handler() {
     };
   }
  */ 
-catch (error) {
+  } catch (error) {
   console.error("FULL ERROR:", error);
 
   return {
