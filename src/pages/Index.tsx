@@ -62,7 +62,7 @@ const Index = () => {
           </div>
 
           <div className="max-w-5xl mx-auto">
-            <NewsCarousel />
+          <NewsCarousel />
           </div>
         </div>
       </section>
