@@ -49,10 +49,26 @@ export async function handler() {
       statusCode: 200,
       body: "News updated"
     };
+/*	
   } catch (error) {
     return {
       statusCode: 500,
       body: "Error fetching news"
     };
   }
+ */ 
+catch (error) {
+  console.error("FULL ERROR:", error);
+
+  return {
+    statusCode: 500,
+    body: JSON.stringify({
+      error: error.message,
+      stack: error.stack
+    }),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  };
+} 
 }
