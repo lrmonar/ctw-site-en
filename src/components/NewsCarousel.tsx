@@ -17,6 +17,8 @@ const NewsCarousel: React.FC = () => {
     return null;
   }
 
+  console.log("NEWS DATA:", news);
+
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
