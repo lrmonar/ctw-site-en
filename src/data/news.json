@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "id": 1,
+    "title": "Test Article",
+    "link": "https://example.com",
+    "source": "Test Source"
+  }
+]
