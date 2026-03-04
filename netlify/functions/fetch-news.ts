@@ -88,6 +88,8 @@ export async function handler() {
       new Date(a.pubDate || 0).getTime()
     );
 
+	const finalItems = allItems.slice(0, 15);
+	
 	// Keep images only for first 3
 	finalItems.forEach((item, index) => {
 	  if (index > 2) item.image = null;
