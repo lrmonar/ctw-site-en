@@ -16,78 +16,23 @@ interface NewsPanelProps {
   category: "cellular" | "telephony" | "web";
 }
 
-// Mock news data - in a real app this would come from an API
-const mockNewsData: Record<string, NewsItem[]> = {
-  cellular: [
-    {
-      id: 1,
-      title: "5G Network Expansion Accelerates Across Major Cities",
-      summary: "Telecom giants are ramping up 5G deployments in urban centers, promising faster speeds for businesses.",
-      url: "#",
-      date: "2023-05-01"
-    },
-    {
-      id: 2,
-      title: "New Cellular IoT Standard Finalized for Industrial Applications",
-      summary: "The latest cellular IoT protocol aims to revolutionize industrial monitoring and automation systems.",
-      url: "#",
-      date: "2023-04-28"
-    },
-    {
-      id: 3,
-      title: "Private 5G Networks Gain Traction in Manufacturing",
-      summary: "Companies are investing in private cellular networks for improved security and reliability.",
-      url: "#",
-      date: "2023-04-25"
-    }
-  ],
-  telephony: [
-    {
-      id: 1,
-      title: "VoIP Platforms See Surge in Enterprise Adoption",
-      summary: "More businesses are transitioning to VoIP solutions as remote work becomes permanent for many organizations.",
-      url: "#",
-      date: "2023-05-02"
-    },
-    {
-      id: 2,
-      title: "AI-Powered Call Analysis Tools Transform Customer Service",
-      summary: "New telephony tools use artificial intelligence to analyze call sentiment and improve customer interactions.",
-      url: "#",
-      date: "2023-04-29"
-    },
-    {
-      id: 3,
-      title: "Unified Communications Platforms Integrate Advanced Security Features",
-      summary: "Leading UC providers are implementing zero-trust security models in their communications platforms.",
-      url: "#",
-      date: "2023-04-26"
-    }
-  ],
-  web: [
-    {
-      id: 1,
-      title: "Progressive Web Apps Drive Mobile Engagement",
-      summary: "Companies see higher conversion rates after implementing PWA technology for their web applications.",
-      url: "#",
-      date: "2023-05-03"
-    },
-    {
-      id: 2,
-      title: "Serverless Architecture Adoption Continues to Grow",
-      summary: "Web developers increasingly choose serverless approaches for scalability and maintenance benefits.",
-      url: "#",
-      date: "2023-04-30"
-    },
-    {
-      id: 3,
-      title: "WebAssembly Opens New Possibilities for Browser-Based Applications",
-      summary: "Complex applications previously requiring native code can now run efficiently in the browser.",
-      url: "#",
-      date: "2023-04-27"
-    }
-  ]
-};
+// Mock news data WAS HERE now is deleted - in a real app this would come from an API
+
+const [news, setNews] = useState<NewsItem[]>([]);
+const [loading, setLoading] = useState(true);
+
+useEffect(() => {
+  fetch("/.netlify/functions/fetch-news")
+    .then(res => res.json())
+    .then(data => {
+      setNews(data);
+      setLoading(false);
+    })
+    .catch(err => {
+      console.error("News fetch failed", err);
+      setLoading(false);
+    });
+}, []);
 
 const NewsPanel: React.FC<NewsPanelProps> = ({ title, category }) => {
   const [news, setNews] = useState<NewsItem[]>([]);
