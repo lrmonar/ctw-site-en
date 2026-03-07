@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next';
 
 const Index = () => {
 // 	orig. value:  const { t } = useTranslation('index');
-  const { t } = useTranslation('index');
+  const t = (s: string) => s;
 
   const serviceData = [
     {
