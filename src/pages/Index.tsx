@@ -1,3 +1,5 @@
+import NewsCarousel from '@/components/NewsCarousel';
+
 const Index = () => {
   return (
     <main>
