@@ -6,7 +6,6 @@ import ServiceCard from '@/components/ServiceCard';
 import { Button } from '@/components/ui/button';
 import { Phone, Smartphone, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
 
 const Index = () => {
   const { t } = useTranslation('index');
