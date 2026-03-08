@@ -30,16 +30,10 @@ const NewsPanel: React.FC<NewsPanelProps> = ({ title, category }) => {
       .then(data => {
 
         console.log("Panel received:", data);
-
-        const keywords = keywordMap[category];
-
-        const filtered = data.filter((item: NewsItem) =>
-          keywords.some(k =>
-            item.title.toLowerCase().includes(k)
-          )
-        );
-
-        setNews(filtered.slice(0,5));
+		// Temporarily disable filtering 
+        setNews(data.slice(0,5));
+		
+		
         setIsLoading(false);
       })
       .catch(err => {
