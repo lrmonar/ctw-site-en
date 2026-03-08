@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import React from 'react';
 import NewsCarousel from '@/components/NewsCarousel';
 import NewsPanel from '@/components/NewsPanel';
@@ -8,8 +9,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const Index = () => {
-// 	orig. value:  const { t } = useTranslation('index');
-  const t = (s: string) => s;
+  const { t } = useTranslation('index');
 
   const serviceData = [
     {
